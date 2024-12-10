@@ -1,0 +1,439 @@
+/* Global Styles */
+:root {
+    --nuggets-blue: #0E2240;
+    --nuggets-gold: #FEC524;
+    --light-gray: #f4f4f4;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-weight: 400;
+    background: linear-gradient(120deg, #f8f9fa 0%, #e9ecef 100%);
+    color: var(--nuggets-blue);
+    line-height: 1.7;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Add dynamic background decorative elements */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, var(--nuggets-gold) 0%, transparent 10%);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: fadeInOut 8s infinite alternate;
+}
+
+/* Add animation keyframes */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.05;
+        background-size: 40px 40px;
+    }
+    100% {
+        opacity: 0.15;
+        background-size: 60px 60px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before, .animated-element, .team-info, .arena-image, .feature-image, .joker-image {
+        animation: none;
+    }
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--nuggets-blue) 0%, #1a3b6d 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+header img.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+header img.hero-image:hover {
+    transform: scale(1.03);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 25px 0;
+    color: var(--nuggets-gold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+/* Navigation Bar Styles */
+nav {
+    padding: 20px 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    background-color: var(--nuggets-gold);
+    color: var(--nuggets-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(254,197,36,0.3);
+}
+
+/* Main Content Area Styles */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+.team-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(14, 34, 64, 0.1);
+    transition: all 0.4s ease;
+    margin-bottom: 40px;
+    border: 1px solid rgba(254, 197, 36, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.team-info:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(14, 34, 64, 0.15);
+    border-color: var(--nuggets-gold);
+}
+
+/* Paragraph Style Optimization */
+.team-info p {
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.team-info p:hover {
+    background-color: rgba(254, 197, 36, 0.05);
+    padding-left: 20px;
+}
+
+/* Enhanced List Item Styles */
+ul li {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.05em;
+    padding: 15px 20px;
+    margin: 10px 0;
+    background: linear-gradient(to right, transparent 50%, rgba(254, 197, 36, 0.1) 50%);
+    background-size: 200% 100%;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    border: 1px solid transparent;
+}
+
+ul li:hover {
+    background-position: -100% 0;
+    transform: translateX(15px);
+    border-color: var(--nuggets-gold);
+}
+
+/* Arena Information Area Style Optimization */
+.arena-info {
+    margin: 40px 0;
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+.arena-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+    transition: all 0.5s ease;
+    transform-origin: center;
+}
+
+.arena-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Add Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add Responsive Optimization */
+@media (max-width: 768px) {
+    main {
+        padding: 0 20px;
+    }
+    
+    .team-info {
+        padding: 25px;
+    }
+    
+    .team-info p {
+        font-size: 1em;
+    }
+}
+
+.team-info h2 {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    background: linear-gradient(120deg, var(--nuggets-blue), var(--nuggets-gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-info h3 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1.8em;
+    color: var(--nuggets-blue);
+    margin-top: 1.5em;
+    letter-spacing: 0.5px;
+}
+
+.arena-info p {
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.arena-info p:hover {
+    background-color: rgba(254, 197, 36, 0.05);
+    padding-left: 20px;
+}
+
+/* Add Jokic Page Specific Styles */
+.jokic-intro {
+    position: relative;
+    z-index: 1;
+}
+
+.player-highlight {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.feature-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.feature-image:hover {
+    transform: scale(1.03);
+}
+
+.stats-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 25px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    border: 2px solid var(--nuggets-gold);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.stats-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.stats-box h4 {
+    color: var(--nuggets-blue);
+    font-family: var(--heading-font);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--nuggets-gold);
+    padding-bottom: 10px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(14, 34, 64, 0.1);
+}
+
+.stat-label {
+    font-weight: 600;
+    color: var(--nuggets-blue);
+}
+
+.stat-value {
+    font-size: 1.2em;
+    color: var(--nuggets-gold);
+    font-weight: 700;
+}
+
+.joker-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.joker-image {
+    max-width: 400px;
+    border-radius: 50%;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.joker-image:hover {
+    transform: rotate(5deg);
+}
+
+.style-highlights li {
+    background: linear-gradient(45deg, var(--nuggets-blue), transparent);
+    color: white;
+    margin: 15px 0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.quote-section {
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--nuggets-blue), transparent);
+    border-radius: 15px;
+    color: white;
+}
+
+blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0;
+    padding: 20px;
+    border-left: 5px solid var(--nuggets-gold);
+}
+
+blockquote footer {
+    margin-top: 15px;
+    font-size: 0.8em;
+    text-align: right;
+    color: var(--nuggets-gold);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .player-highlight {
+        flex-direction: column;
+    }
+    
+    .feature-image {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+    
+    .joker-image {
+        max-width: 300px;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header img.hero-image {
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
+
+/* Achievement Display Area */
+.achievements {
+    background: linear-gradient(135deg, rgba(14, 34, 64, 0.95), rgba(14, 34, 64, 0.8));
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px 0;
+    color: white;
+}
+
+.achievements h3 {
+    color: var(--nuggets-gold);
+    font-family: var(--heading-font);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--nuggets-gold);
+    padding-bottom: 10px;
+}

@@ -1,0 +1,123 @@
+body { 
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1B365D; /* Nuggets navy blue */
+    color: white;
+}
+
+header {
+    background: linear-gradient(135deg, #0E2240 0%, #1a3b6d 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 25px 0;
+    color: #FEC524;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 2.5em;
+}
+
+nav {
+    padding: 20px 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
+}
+
+nav a:hover {
+    background-color: #FEC524;
+    color: #0E2240;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(254,197,36,0.3);
+}
+
+.player-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .player-card {
+        transition: none;
+    }
+    .player-card:hover {
+        transform: none;
+    }
+}
+
+.player-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #FEC524;
+}
+
+.player-info h2 {
+    color: #FEC524;
+    margin-top: 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stat-box {
+    background: #FEC524;
+    color: #1B365D;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .player-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .player-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}

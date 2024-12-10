@@ -1,0 +1,168 @@
+:root {
+    --nuggets-blue: #0E2240;
+    --nuggets-gold: #FEC524;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, var(--nuggets-blue), #1a3b6d);
+    color: white;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(14, 34, 64, 0.8);
+    margin: 2rem 0;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(254, 197, 36, 0.3);
+}
+
+.animated-title {
+    font-size: 3rem;
+    color: var(--nuggets-gold);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.milestone {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.milestone:hover {
+    transform: translateY(-5px);
+    background: rgba(254, 197, 36, 0.2);
+}
+
+.playoff-rounds {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.media-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.media-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+header.main-header {
+    background: linear-gradient(135deg, var(--nuggets-blue) 0%, #1a3b6d 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.header-content h1 {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 25px 0;
+    color: var(--nuggets-gold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 2.5em;
+}
+
+.main-nav {
+    padding: 20px 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main-nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.main-nav a:hover {
+    background-color: var(--nuggets-gold);
+    color: var(--nuggets-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(254,197,36,0.3);
+}
+@media (prefers-reduced-motion: reduce) {
+    .main-nav a {
+        transition: none;
+    }
+    .main-nav a:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+.image-description, .video-description {
+    padding: 15px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #333;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+.video-description {
+    margin-bottom: 15px;
+}
+
+/* Add more styling as needed */

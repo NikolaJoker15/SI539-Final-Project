@@ -1,0 +1,243 @@
+:root {
+    --nuggets-blue: #0E2240;
+    --nuggets-gold: #FEC524;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    background: linear-gradient(to bottom, var(--nuggets-blue), #1a3b6d);
+    color: white;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header styling similar to nikola-jokic page */
+header {
+    background: linear-gradient(135deg, var(--nuggets-blue) 0%, #1a3b6d 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 25px 0;
+    color: var(--nuggets-gold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 2.5em;
+}
+
+header nav {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
+}
+
+header nav a:hover {
+    background-color: var(--nuggets-gold);
+    color: var(--nuggets-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(254,197,36,0.3);
+}
+
+/* Hero image styling */
+.hero-image {
+    width: 100%;
+    max-height: 1200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Intro / main sections styling similar to jokic page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(254,197,36,0.3);
+    margin: 2rem 0;
+}
+
+.intro h2 {
+    color: var(--nuggets-gold);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--heading-font);
+}
+
+/* Gallery styling similar to a card layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Achievements section with a subtle transparent background */
+.achievements {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(14, 34, 64, 0.3);
+    margin: 40px 0;
+    border: 1px solid rgba(254, 197, 36, 0.2);
+}
+
+.achievements h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--heading-font);
+    color: var(--nuggets-gold);
+}
+
+.achievements ul li {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.05em;
+    padding: 15px 20px;
+    margin: 10px 0;
+    list-style: none;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.achievements ul li:hover {
+    background-color: rgba(254,197,36,0.2);
+    transform: translateX(5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .achievements ul li {
+        transition: none;
+    }
+    .achievements ul li:hover {
+        transform: none;
+    }
+}
+/* Necklace section */
+.necklace-section {
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(254,197,36,0.3);
+    margin: 2rem 0;
+}
+
+.necklace-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.necklace-image:hover {
+    transform: scale(1.05);
+}
+
+/* Quote section */
+.quote-section {
+    background: linear-gradient(135deg, var(--nuggets-blue), #1a3b6d);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(254,197,36,0.3);
+    margin: 2rem 0;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--nuggets-gold);
+    position: absolute;
+    left: -2rem;
+    top: -1rem;
+}
+
+blockquote footer {
+    color: var(--nuggets-gold);
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero-image {
+        border-radius: 0;
+        max-height: 250px;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        width: 80%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .gallery img {
+        height: auto;
+    }
+}

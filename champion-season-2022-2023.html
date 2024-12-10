@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champion Season 2022-2023</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Denver Nuggets: 2022-2023 NBA Champions</h1>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="nikola-jokic.html">Nikola Jokic</a>
+                <a href="michael-malone.html">Coach Michael Malone</a>
+                <a href="crucial-players.html">Crucial Players</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero-section content-section">
+            <h2 class="section-title animated-title">History Made in Mile High City! 🏆</h2>
+            <p class="section-text emotional-text">As a die-hard Nuggets fan, witnessing our team's first NBA Championship was a dream come true! After 47 years of waiting, our beloved Denver Nuggets finally reached the mountain top in the most spectacular way possible.</p>
+        </section>
+
+        <section class="season-highlights content-section">
+            <h3 class="section-title">Our Historic Journey</h3>
+            <div class="milestone-grid card-grid">
+                <div class="milestone card">
+                    <i class="fas fa-trophy icon"></i>
+                    <h4 class="card-title">53-29 Regular Season Record</h4>
+                    <p class="card-text">Western Conference #1 Seed</p>
+                </div>
+                <div class="milestone card">
+                    <i class="fas fa-basketball-ball icon"></i>
+                    <h4 class="card-title">16-4 Playoff Record</h4>
+                    <p class="card-text">Dominated Through Every Round</p>
+                </div>
+                <div class="milestone card">
+                    <i class="fas fa-star icon"></i>
+                    <h4 class="card-title">Jokić's Brilliance</h4>
+                    <p class="card-text">Finals MVP: 30.2 PPG, 14.0 RPG, 7.2 APG</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="playoff-journey content-section">
+            <h3 class="section-title">Our Playoff Path to Glory</h3>
+            <div class="playoff-rounds card-grid">
+                <div class="round card">
+                    <h4 class="card-title">Round 1: vs Timberwolves (4-1)</h4>
+                    <p class="card-text">Dominated with team basketball</p>
+                </div>
+                <div class="round card">
+                    <h4 class="card-title">Round 2: vs Suns (4-2)</h4>
+                    <p class="card-text">Overcame the superstar duo</p>
+                </div>
+                <div class="round card">
+                    <h4 class="card-title">WCF: vs Lakers (4-0)</h4>
+                    <p class="card-text">Swept LeBron and company!</p>
+                </div>
+                <div class="round highlight card">
+                    <h4 class="card-title">Finals: vs Heat (4-1)</h4>
+                    <p class="card-text">Brought the trophy home!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="media-container content-section">
+            <div class="media-grid">
+                <div class="media-item card">
+                    <img src="images/Denver Nuggets Champion.jpg" 
+                         srcset="images/Denver Nuggets Champion-small.jpg 800w,
+                                 images/Denver Nuggets Champion.jpg 2000w"
+                         sizes="(max-width: 600px) 100vw, 600px"
+                         alt="Denver Nuggets Championship Celebration"
+                         class="responsive-image">
+                    <p class="image-description">A moment etched in eternity! Tears welled up in my eyes watching our players hoist the franchise's first NBA Championship trophy. Jokić, Murray, AG, KCP, MPJ, and every hero on that bench - you created the greatest moment in Denver sports history!</p>
+                </div>
+                <div class="media-item card">
+                    <img src="images/Championship Parade.jpg"
+                         srcset="images/Championship Parade-small.jpg 800w,
+                                 images/Championship Parade.jpg 2500w"
+                         sizes="(max-width: 600px) 100vw, 600px"
+                         alt="Denver Championship Parade"
+                         class="responsive-image">
+                    <p class="image-description">Over 750,000 fans flooded the streets of Denver! The entire city was a sea of blue and gold, with cheers echoing through the Rocky Mountain air. This victory parade belonged to all of us, marking the legendary journey of our Nuggets from underdogs to NBA champions!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-container content-section">
+            <div class="video-wrapper card">
+                <video id="championshipVideo" class="responsive-video" controls>
+                    <source src="video/Denver Nuggets Final Seconds in 2023.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+                <p class="video-description">The final moments of Game 5 - as the clock ticked down to zero, Ball Arena erupted! 47 years of waiting culminated in pure perfection. Watching Jokić fall to his knees at center court, Murray embracing teammates with tears streaming down his face - every frame of this video gives me chills. I've watched it hundreds of times, and it still brings tears of joy!</p>
+                <div class="controls button-group">
+                    <button class="btn" onclick="videoPlayer.playPause()">Play/Pause</button>
+                    <button class="btn" onclick="videoPlayer.restart()">Restart</button>
+                    <button class="btn" onclick="videoPlayer.skip(10)">Skip 10s</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p class="fan-quote section-text">"From the Rainbow Skyline to the Larry O'Brien - Our City, Our Time!"</p>
+    </footer>
+    <script src="js/video-player.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
